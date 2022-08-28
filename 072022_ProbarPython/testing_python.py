@@ -59,7 +59,17 @@ print("El alumno es ", cadena) #pasamos la cadena a mayuscula
 
 #crea una lista e imprime el largo de esa lista
 mi_lista = [1, 'Zen', 'hola']
-print(len(mi_lista))
+lista2=['hola','como','estas']
 
-print(min(mi_lista))
+mi_lista.extend(lista2)
+print(mi_lista)
+mi_lista.index('como')
 
+#ejemplo tuplas
+perro = ("Canis Familiaris", "perro", "carnívoro", 12)
+print(perro[2])
+perro[1]="gato"#arroja error ya que no podemos modificar una tupla (principal diferencia con una lista)
+perro = perro + ("doméstico",)#agregamos un valor a la tupla
+print(perro)
+perro = perro[:3] + ("el mejor amigo del hombre",) + perro[4:]
+print(perro)
