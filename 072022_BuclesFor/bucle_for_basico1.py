@@ -26,9 +26,8 @@ print(sum)
 for x in range(2018,0, -4):
     print (x)
 #Contador flexible: establece tres variables: lowNum, highNum, mult. Comenzando en lowNum y pasando por highNum, imprime solo los enteros que sean múltiplos de mult. Por ejemplo, si lowNum=2, highNum=9 y mult=3. El bucle debe imprimir 3, 6, 9 (en líneas sucesivas). 
-
 lowNum=2
-highNum=9
+highNum=80
 mult=3
 
 for x in range(lowNum, highNum+1):
@@ -36,3 +35,6 @@ for x in range(lowNum, highNum+1):
         print(x)
     else:
         continue
+
+
+    
