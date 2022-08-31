@@ -1,3 +1,4 @@
+from email.policy import default
 import random
 
 print('Welcome to Python!')
@@ -73,3 +74,15 @@ perro = perro + ("doméstico",)#agregamos un valor a la tupla
 print(perro)
 perro = perro[:3] + ("el mejor amigo del hombre",) + perro[4:]
 print(perro)
+
+#diccionario
+context = {
+
+1 : {'¿Por que hay luz en el refrigerador y no en el congelador?'},
+2 : {'¿Por que las ovejas no se encogen cuando llueve?'},
+3 : {'¿Por que se llaman apartamentos cuando estan todos pegados?'},
+4 : {'¿Por que los autos conducen en la autopista y se estacionan en la entrada?'}
+
+}
+print(context.keys())
+print(context.values())
