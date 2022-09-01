@@ -56,16 +56,14 @@ def iterateDictionary2(key, lista):
 
 iterateDictionary2('last_name', estudiantes)
 
+
 dojo = {
     'ubicaciones': ['San Jose', 'Seattle', 'Dallas', 'Chicago', 'Tulsa', 'DC', 'Burbank'],
-    'instructores': ['Michael', 'Amy', 'Eduardo', 'Josh', 'Graham', 'Patrick', 'Minh', 'Devon','Michael', 'Amy', 'Eduardo', 'Josh', 'Graham', 'Patrick', 'Minh', 'Devon']
+    'instructores': ['Michael', 'Amy', 'Eduardo', 'Josh', 'Graham', 'Patrick', 'Minh', 'Devon']
 }
 def printInfo(dic):
     for ele in dic:
         print (len(dic[ele]), ele)
-        
         print('\n'.join(map(str, dic[ele])))
-
-
 
 printInfo(dojo)
