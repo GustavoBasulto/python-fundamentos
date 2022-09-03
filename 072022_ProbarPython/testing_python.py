@@ -202,3 +202,108 @@ b = multiplicar(a,5)
 print(b)
 # salida:
 # [2,4,10,16]
+
+
+
+#Definicion de una clase
+class Usuario:		
+    def __init__(self):
+        self.name = "gustavo"
+        self.email = "gustavo@codingdojo.com"
+        self.balance_cuenta = 0
+
+Usuario()
+guido = Usuario()#creamos instancias de la clase Usuario
+monty = Usuario()
+# Accediendo a los atributos de la instancia
+print(guido.name)	# salida: Gustavo
+print(monty.name)	# salida: Gustavo
+
+guido.name = "Guido"
+print(guido.name) # salida: Guido
+monty.name = "Monty"
+print(monty.name) # salida: Monty
+
+print(guido)
+
+
+#Atributos de una clase
+class Usuario:
+    # declarando un atributo de clase
+    nombre_banco = "Primer Dojo Nacional"		
+    def __init__(self):
+        self.name = "Michael"
+        self.email = "michael@codingdojo.com"
+        self.balance_cuenta = 0
+guido = Usuario()
+monty = Usuario()
+Usuario.nombre_banco = "Banco del Dojo"
+print(guido.nombre_banco) # salida: Banco del Dojo
+print(monty.nombre_banco) # salida: Banco del Dojo
+
+
+guido = Usuario()
+monty = Usuario()
+guido.nombre_banco = "Dojo Credit Union"
+print(guido.nombre_banco) # salida: Dojo Credit Union 
+print(monty.nombre_banco) # salida: Primer Dojo Nacional
+
+
+#PASAR ARGUMENTOS A LA CLASE
+class Usuario:
+    # los atributos de clase se definen en la clase
+    nombre_banco = "Primer Dojo Nacional"
+    # ¡ahora nuestro método tiene 2 parámetros!
+    def __init__(self , name, email_address):
+    	# los asignamos en consecuencia
+        self.name = name
+        self.email = email_address
+    	# el balance de la cuenta se establece en $0
+        self.balance_cuenta = 0
+guido = Usuario("Guido van Rossum", "guido@python.com")
+monty = Usuario("Monty Python", "monty@python.com")
+print(guido.name)	# salida: Guido van Rossum
+print(monty.name)	# salida: Monty Python
+
+class Usuario:		# esto es lo que tenemos hasta ahora
+    def __init__(self, name, email):
+        self.name = name
+        self.email = email
+        self.balance_cuenta = 0
+    # agregando el método de depósito
+    def hacer_depósito(self, amount):	# toma un argumento que es el monto del depósito
+    	self.balance_cuenta += amount	# la cuenta del usuario específico aumenta en la cantidad del valor recibido
+guido = Usuario("Guido van Rossum", "guido@python.com")
+monty = Usuario("Monty Python", "monty@python.com")
+
+guido.hacer_depósito(100)
+guido.hacer_depósito(200)
+monty.hacer_depósito(50)
+print(guido.balance_cuenta)	# salida: 300
+print(monty.balance_cuenta)	
+
+#Metodos de clase - @classmethod
+
+class CuentaBancaria:
+
+    nombre_banco = "Primer Dojo Nacional"
+    todas_las_cuentas = []
+    def __init__(self, tasa_interes,balance):
+        self.tasa_int = tasa_int
+        self.balance = balance
+        CuentaBancaria.todas_las_cuentas.append(self)
+
+# método de clase para cambiar el nombre del banco
+    @classmethod
+    def cambiar_nombre_banco(cls,name):
+        cls.nombre_banco = name
+    # método de clase para obtener balance de todas las cuentas
+    @classmethod
+    def todos_los_balances(cls):
+        sum = 0
+        # utilizamos cls para referirnos a la clase 
+        for account in cls.todas_las_cuentas:
+            sum += balance.cuenta
+        return sum
+
+#Metodos de clase - @classmethod
